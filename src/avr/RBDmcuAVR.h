@@ -10,12 +10,14 @@
 #include <util/atomic.h>
 
 #if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+
 #define DIMMER_TIMER 4
 #define INT_vect INT4_vect   
 #define INTx INT4
 #define EICRX EICRB
 #define ISCx1 ISC41
 #define ISCx0 ISC40
+
 #define ALL_DIMMERS 50
 
 #define TCCRxA_VALUE 0x00 // CTC mode
@@ -29,12 +31,14 @@
 #define OCRxAL(X) _OCRxAL(X)
 
 #elif defined(__AVR_ATmega32U4__)
+
 #define DIMMER_TIMER 1
 #define INT_vect INT6_vect
 #define INTx INT6
 #define EICRX EICRB
 #define ISCx1 ISC61
 #define ISCx0 ISC60
+
 #define ALL_DIMMERS 30
 
 #define TCCRxA_VALUE 0x00 // CTC mode
@@ -48,12 +52,14 @@
 #define OCRxAL(X) _OCRxAL(X)
 
 #else
+
 #define DIMMER_TIMER 2
 #define INT_vect INT0_vect
 #define INTx INT0
 #define EICRX EICRA
 #define ISCx1 ISC01
 #define ISCx0 ISC00
+
 #define ALL_DIMMERS 13
 
 #define TCCRxA_VALUE 0x02

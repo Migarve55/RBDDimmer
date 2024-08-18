@@ -82,7 +82,7 @@ This library can simplify user code with following functions:
         Serial.print(dimmer.getState()); Result 0 (OFF) or 1 (ON)
    
     9. Function changeState changes dimmer state to the opposite one 
-        Пример dimmer.setState(ON); delay(100); dimmer.changeState; delay(100);
+        dimmer.setState(ON); delay(100); dimmer.changeState; delay(100);
   
     10. Function toggleSettings smooth change of dimming value up or down in a defined range
         Example located in \RBDdimmer\examples\SimpleToggleDimmer
